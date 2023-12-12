@@ -8,5 +8,9 @@ public class ContaBancaria {
         this.titular = titular;
     }
 
+    public Cliente getTitular(){
+        return titular;
+    }
+
 
 }
