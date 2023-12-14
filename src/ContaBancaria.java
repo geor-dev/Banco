@@ -1,16 +1,28 @@
 public class ContaBancaria {
-    private int NumeroConta;
-    private double Saldo;
-
+    private int numeroConta;
+    private double saldo;
     private Cliente titular;
 
-    public void setTitular(Cliente titular){
-        this.titular = titular;
+    public int getNumeroConta() {
+        return numeroConta;
     }
 
-    public Cliente getTitular(){
+    public void setNumeroConta(int numeroConta) {
+        this.numeroConta = numeroConta;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
+    public Cliente getTitular() {
         return titular;
     }
 
-
+    public void setTitular(Cliente titular) {
+        this.titular = titular;
+    }
 }
+
+
+

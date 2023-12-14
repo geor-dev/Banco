@@ -7,5 +7,12 @@ public class Cliente {
         this.Nome = nome;
         this.Cpf = cpf;
     }
-    
+
+    public String getNome() {
+        return Nome;
+    }
+
+    public String getCpf() {
+        return Cpf;
+    }
 }
