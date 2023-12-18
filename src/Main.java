@@ -20,6 +20,20 @@ public class Main {
                 case 1:
                     banco.criarConta(in);
                     break;
+                case 2:
+                    banco.depositar(in);
+                    break;
+                case 3:
+                    banco.sacar(in);
+                    break;
+                case 4:
+                    banco.VerificarSaldo(in);
+                    break;
+                case 0:
+                    System.out.println("Saindo");
+                    System.exit(0);
+                default:
+                    System.out.println("Opção inválida, tente novamente");
             }
         }
     }

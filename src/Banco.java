@@ -27,4 +27,50 @@ public class Banco {
         }
         return null;
     }
+
+    public void depositar(Scanner in){
+        System.out.println("Digite o numero da conta");
+        int numeroConta = in.nextInt();
+
+        Conta conta = encontrarnumeroConta(numeroConta);
+        if (conta != null){
+            System.out.println("Digite o valor a ser depositado");
+            double valor = in.nextDouble();
+            conta.depositar(valor);
+            System.out.println("Depósito realizado com sucesso. Novo saldo: " + conta.getSaldo());
+        }else{
+            System.out.println("Conta não encontrada");
+        }
+    }
+
+    public void sacar(Scanner in){
+        System.out.println("Digite o numero da conta");
+        int numeroConta = in.nextInt();
+
+        Conta conta = encontrarnumeroConta(numeroConta);
+        if(conta != null){
+            System.out.println("Digite o valor a ser sacado");
+            double valor = in.nextDouble();
+
+            if(conta.sacar(valor)){
+                System.out.println("Saque realizado com sucesso. Novo saldo: " + conta.getSaldo());
+            }else {
+                System.out.println("Saldo insuficiente");
+            }
+        }
+    }
+    public void VerificarSaldo(Scanner in){
+        System.out.println("Digite o numero da conta");
+        int numeroConta = in.nextInt();
+
+        Conta conta = encontrarnumeroConta(numeroConta);
+        if(conta != null){
+            System.out.println("Saldo Atual e: " + conta.getSaldo());
+        }else{
+            System.out.println("Conta não encontrada");
+        }
+    }
+
+
+
 }
